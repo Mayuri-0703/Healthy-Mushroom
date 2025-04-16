@@ -1,0 +1,244 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading and Section Styles */
+  h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Greeting Section */
+  .greeting {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .greeting h1 {
+    font-size: 2.5rem;
+    color: #27ae60;
+  }
+  
+  .intro-text {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+  }
+  
+  /* Poisonous vs Edible Mushrooms Section */
+  .mushroom-comparison {
+    margin-bottom: 40px;
+  }
+  
+  .mushroom-comparison h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .comparison-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .mushroom-group {
+    width: 48%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mushroom-group h3 {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    text-align: center;
+  }
+  
+  .mushroom-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .mushroom-images img {
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mushroom-group p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-align: center;
+  }
+  
+  /* Mushroom Info Section */
+  .mushroom-info {
+    margin-bottom: 40px;
+  }
+  
+  .mushroom-info h2 {
+    font-size: 1.8rem;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .feature-description {
+    margin-bottom: 30px;
+  }
+  
+  .feature-description h3 {
+    font-size: 1.3rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+  }
+  
+  .feature-description p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .feature-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  /* Form Section */
+  .form-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    color: #34495e;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2ecc71;
+  }
+  
+  /* Result Section */
+  .result-section {
+    display: none;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-box {
+    text-align: center;
+  }
+  
+  .result-section h2 {
+    font-size: 2rem;
+    color: #2980b9;
+  }
+  
+  .result-section p {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  .go-back-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .go-back-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Footer Section */
+  footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .home-btn {
+    font-size: 1rem;
+    color: #2980b9;
+    text-decoration: none;
+    border: 2px solid #2980b9;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .home-btn:hover {
+    background-color: #2980b9;
+    color: #fff;
+  }
+  

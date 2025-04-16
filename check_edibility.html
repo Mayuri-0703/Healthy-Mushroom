@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Mushroom Edibility</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <!-- Main Section -->
+  <div class="container">
+
+    <!-- Welcome Section -->
+    <section class="greeting">
+      <h1>Welcome to Mushroom Edibility Checker 🍄</h1>
+      <p class="intro-text">Want to check if the mushroom you're about to eat is poisonous or safe? Let's find out!</p>
+    </section>
+
+    <!-- Poisonous vs Edible Mushrooms Section -->
+    <section class="mushroom-comparison">
+      <h2>Poisonous vs Edible Mushrooms</h2>
+      <div class="comparison-container">
+        <!-- Poisonous Mushrooms -->
+        <div class="mushroom-group">
+          <h3>Poisonous Mushrooms</h3>
+          <div class="mushroom-images">
+            <img src="assets/poisonous 1.jpg" alt="Poisonous Mushroom 1">
+            <img src="assets/poisonous 2.jpg" alt="Poisonous Mushroom 2">
+            <img src="assets/poisonous 3.jpg" alt="Poisonous Mushroom 3">
+          </div>
+          <p>These mushrooms are highly toxic and should be avoided at all costs!</p>
+        </div>
+
+        <!-- Edible Mushrooms -->
+        <div class="mushroom-group">
+          <h3>Edible Mushrooms</h3>
+          <div class="mushroom-images">
+            <img src="assets/edible 1.webp" alt="Edible Mushroom 1">
+            <img src="assets/edible 2.webp" alt="Edible Mushroom 2">
+            <img src="assets/edible 3.avif" alt="Edible Mushroom 3">
+          </div>
+          <p>These mushrooms are safe to eat and full of nutrients. Enjoy them in your meals!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mushroom Info Section -->
+    <section class="mushroom-info">
+      <h2>Learn How to Identify Mushrooms:</h2>
+      <p>Before we proceed with the form, let's look at some important mushroom characteristics that help in identifying whether it's safe to eat or poisonous.</p>
+
+      <div class="feature-description">
+        <h3>Cap Shape</h3>
+        <p>The shape of the mushroom cap can be bell-shaped, conical, or flat. This helps us identify the type of mushroom.</p>
+        <img src="assets/cap-shape.webp" alt="Cap Shape Examples" class="feature-image" />
+      </div>
+
+      <div class="feature-description">
+        <h3>Cap Surface</h3>
+        <p>The surface of the cap can be smooth, scaly, or fibrous. This is another characteristic used to distinguish between different types of mushrooms.</p>
+        <img src="assets/cap-surface.jpg" alt="Cap Surface Examples" class="feature-image" />
+      </div>
+
+      <div class="feature-description">
+        <h3>Odor</h3>
+        <p>The odor of a mushroom can vary. Some mushrooms may have a sweet smell, while others may smell like almonds or even unpleasant odors.</p>
+        <!-- <img src="assets/odor.jfif" alt="Odor Examples" class="feature-image" style="height:200px"style= "width50px"/> -->
+      </div>
+
+      <p>Once you have reviewed these characteristics, proceed to the form below to input the details of the mushroom you're checking.</p>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <div class="form-box">
+        <h2>Check If Your Mushroom is Edible or Poisonous</h2>
+        <form id="mushroom-form">
+          <div class="form-group">
+            <label for="cap-shape">Cap Shape:</label>
+            <input type="text" id="cap-shape" name="cap-shape" required placeholder="e.g. Bell, Conical, Flat">
+          </div>
+
+          <div class="form-group">
+            <label for="cap-surface">Cap Surface:</label>
+            <input type="text" id="cap-surface" name="cap-surface" required placeholder="e.g. Smooth, Scaly, Fibrous">
+          </div>
+
+          <div class="form-group">
+            <label for="cap-color">Cap Color:</label>
+            <input type="text" id="cap-color" name="cap-color" required placeholder="e.g. White, Brown, Yellow">
+          </div>
+
+          <div class="form-group">
+            <label for="odor">Odor:</label>
+            <input type="text" id="odor" name="odor" required placeholder="e.g. Almond, Earthy, None">
+          </div>
+
+          <button type="submit" class="submit-btn">Check Edibility</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Result Section -->
+    <section class="result-section" id="result-section" style="display:none;">
+      <div class="result-box">
+        <h2>Result:</h2>
+        <p id="result-message"></p>
+        <button onclick="goBack()" class="go-back-btn">Go Back to Form</button>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <a href="index.html" class="home-btn">Go Back to Home</a>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('mushroom-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get form values
+      const capShape = document.getElementById('cap-shape').value;
+      const capSurface = document.getElementById('cap-surface').value;
+      const capColor = document.getElementById('cap-color').value;
+      const odor = document.getElementById('odor').value;
+
+      // Simulating an ML model check for the mushroom's edibility
+      const result = Math.random() > 0.5 ? "Edible" : "Poisonous";
+
+      // Display result and hide the form
+      document.getElementById('result-message').textContent = result === "Edible" ? 
+        "Yay! It's edible and safe to eat." : 
+        "Oops! Don't eat that, it's dangerous to your health.";
+      
+      document.querySelector('.form-section').style.display = 'none';
+      document.getElementById('result-section').style.display = 'block';
+    });
+
+    function goBack() {
+      // Go back to the form page
+      document.querySelector('.form-section').style.display = 'block';
+      document.getElementById('result-section').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
